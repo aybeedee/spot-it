@@ -6,4 +6,6 @@ Pages (UI):
 - [X] login
 - [X] forgot password
 - [X] sign up
-- [ ] email verification
+- [X] email verification
+- [ ] bottom navigation bar
+- [ ] home fragment

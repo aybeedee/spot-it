@@ -10,7 +10,6 @@
     <ImageView
         android:layout_width="286dp"
         android:layout_height="157dp"
-
         android:src="@drawable/spot_it_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

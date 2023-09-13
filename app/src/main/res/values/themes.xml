@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.I200528" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Input box -->
-        <item name="android:textColorHint">@color/input_hint</item>
+        <!-- Input box text -->
+        <item name="android:textColorHint">@color/primary_grey_2</item>
         <!-- Status bar -->
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">#ffffff</item>

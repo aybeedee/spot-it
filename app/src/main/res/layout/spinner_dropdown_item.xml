@@ -4,6 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textSize="18sp"
-    android:textColor="@color/input_hint"
+    android:textColor="@color/primary_grey_2"
     android:paddingLeft="19dp"
     />
