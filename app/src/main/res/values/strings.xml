@@ -1,3 +1,24 @@
 <resources>
+
     <string name="app_name">i200528</string>
+
+    <string-array name="countries_array">
+        <item>Select Country</item>
+        <item>Pakistan</item>
+        <item>Dubai</item>
+        <item>Iran</item>
+        <item>Turkey</item>
+        <item>Saudi Arabia</item>
+    </string-array>
+
+    <string-array name="cities_array">
+        <item>Select City</item>
+        <item>Islamabad</item>
+        <item>Karachi</item>
+        <item>Lahore</item>
+        <item>Peshawar</item>
+        <item>Quetta</item>
+        <item>Multan</item>
+        <item>Hyderabad</item>
+    </string-array>
 </resources>

@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class Login extends AppCompatActivity {
 
     TextView forgot_password;
+    TextView sign_up;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         forgot_password = findViewById(R.id.text_forgot_password);
+        sign_up = findViewById(R.id.text_sign_up);
 
         forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,5 +27,14 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        sign_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this, SignUp.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

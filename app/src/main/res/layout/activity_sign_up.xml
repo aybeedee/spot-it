@@ -11,20 +11,37 @@
     android:padding="20dp">
 
     <ImageView
-        android:layout_width="216dp"
-        android:layout_height="117dp"
-        android:src="@drawable/spot_it_logo"
-        android:layout_marginTop="30dp"/>
+        android:layout_width="131dp"
+        android:layout_height="65dp"
+        android:src="@drawable/spot_it_logo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Registration"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_gravity="start"
         android:textColor="#131313"
         android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#3F4144"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter name"
+        android:inputType="textPersonName"
+        android:background="@drawable/input_box"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="15dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -47,7 +64,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:text="Contact Number"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="#3F4144"
@@ -56,24 +73,61 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="Enter password"
-        android:inputType="textPassword"
+        android:hint="Enter contact number"
+        android:inputType="phone"
         android:background="@drawable/input_box"
         android:paddingLeft="15dp"
         android:layout_marginBottom="15dp" />
 
     <TextView
-        android:id="@+id/text_forgot_password"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Forgot your password?"
-        android:textSize="17sp"
-        android:layout_gravity="end"
-        android:textColor="@color/primary_orange"
-        android:layout_marginBottom="25dp" />
+        android:text="Country"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#3F4144"
+        android:layout_marginBottom="5dp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/input_box">
+
+        <Spinner
+            android:id="@+id/spinner_country_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:spinnerMode="dialog" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#3F4144"
+        android:layout_marginBottom="5dp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/input_box">
+
+        <Spinner
+            android:id="@+id/spinner_city_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:spinnerMode="dialog" />
+
+    </LinearLayout>
 
     <Button
-        android:text="Login"
+        android:id="@+id/button_sign_up"
+        android:text="Sign Up"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/button"
@@ -86,14 +140,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="bottom|center"
-        android:layout_marginBottom="10dp">
+        android:gravity="bottom|center">
 
         <TextView
-            android:id="@+id/text_sign_up"
+            android:id="@+id/text_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
+            android:text="Login"
             android:textSize="17sp"
             android:textStyle="bold"
             android:textColor="#56595D" />
