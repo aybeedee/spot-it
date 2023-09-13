@@ -14,13 +14,14 @@
         android:layout_width="216dp"
         android:layout_height="117dp"
         android:src="@drawable/spot_it_logo"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="30dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:textSize="25sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:layout_gravity="start"
         android:textColor="#131313"
         android:layout_marginBottom="20dp" />
@@ -29,7 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Email"
-        android:textSize="17sp"
+        android:textSize="15sp"
+        android:textStyle="bold"
         android:textColor="#3F4144"
         android:layout_marginBottom="5dp" />
 
@@ -46,7 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Password"
-        android:textSize="17sp"
+        android:textSize="15sp"
+        android:textStyle="bold"
         android:textColor="#3F4144"
         android:layout_marginBottom="5dp" />
 
@@ -60,24 +63,24 @@
         android:layout_marginBottom="15dp" />
 
     <TextView
+        android:id="@+id/text_forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot your password?"
-        android:textSize="20sp"
+        android:textSize="17sp"
         android:layout_gravity="end"
         android:textColor="@color/primary_orange"
-        android:layout_marginBottom="25dp"
-        android:onClick="navigateForgotPassword" />
+        android:layout_marginBottom="25dp" />
 
     <Button
         android:onClick="nextPage"
         android:text="Login"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="60dp"
         android:background="@drawable/button"
         android:textColor="@color/white"
         android:textAllCaps="false"
-        android:textSize="20sp"
+        android:textSize="17sp"
         android:stateListAnimator="@null" />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -85,13 +88,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="bottom|center"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign Up"
-            android:textSize="20sp"
+            android:textSize="17sp"
+            android:textStyle="bold"
             android:textColor="#56595D" />
 
     </LinearLayout>
