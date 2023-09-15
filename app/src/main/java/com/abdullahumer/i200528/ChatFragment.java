@@ -1,5 +1,6 @@
 package com.abdullahumer.i200528;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +25,8 @@ public class ChatFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    LinearLayout chat_item;
 
     public ChatFragment() {
         // Required empty public constructor
@@ -58,7 +62,20 @@ public class ChatFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat, container, false);
+        View view = inflater.inflate(R.layout.fragment_chat, container, false);
+
+        chat_item = view.findViewById(R.id.linear_chat_item);
+
+        chat_item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), DirectMessage.class);
+                startActivity(intent);
+            }
+        });
+
+        return view;
     }
 }
