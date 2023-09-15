@@ -11,7 +11,7 @@ Pages (UI):
 - [X] home fragment
 - [X] search fragment
 - [X] search results
-- [ ] chat fragment
+- [X] chat fragment
 - [ ] direct message
 - [ ] profile fragment
 - [ ] item details

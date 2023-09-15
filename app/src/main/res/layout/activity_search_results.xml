@@ -51,7 +51,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linear_search_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -77,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
                 android:spinnerMode="dialog"
-                android:background="@drawable/ic_transparent"/>
+                android:background="@drawable/ic_transparent" />
 
             <ImageView
                 android:layout_gravity="end|center_vertical"
