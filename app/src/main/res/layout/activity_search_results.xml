@@ -108,6 +108,7 @@
                 android:clipToPadding="false">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card_item_navigate_search"
                     android:layout_width="250dp"
                     android:layout_height="200dp"
                     app:cardCornerRadius="10dp"

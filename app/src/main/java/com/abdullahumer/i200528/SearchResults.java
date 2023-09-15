@@ -1,6 +1,7 @@
 package com.abdullahumer.i200528;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -16,7 +17,7 @@ import android.widget.Spinner;
 public class SearchResults extends AppCompatActivity {
 
     ImageView back_search;
-
+    CardView item_navigate_search;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class SearchResults extends AppCompatActivity {
         filterSpinner.setAdapter(filterSpinnerAdapter);
 
         back_search = findViewById(R.id.image_back_search);
+        item_navigate_search = findViewById(R.id.card_item_navigate_search);
 
         back_search.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,5 +40,16 @@ public class SearchResults extends AppCompatActivity {
 
             }
         });
+
+        item_navigate_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(SearchResults.this, ItemDetails.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
 }

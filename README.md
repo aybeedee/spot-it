@@ -13,8 +13,8 @@ Pages (UI):
 - [X] search results
 - [X] chat fragment
 - [X] direct message
-- [ ] profile fragment
-- [ ] item details
+- [X] profile fragment
+- [X] item details
 - [ ] post item
 - [ ] edit profile
 - [ ] report
