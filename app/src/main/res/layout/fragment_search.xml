@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sole F60 Treadmill"
+            android:text="Sole F63 Treadmill"
             android:textSize="17sp"
             android:gravity="start"
             android:layout_weight="1"
@@ -121,7 +121,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sole F63 Treadmill"
+            android:text="Sole F60 Treadmill"
             android:textSize="17sp"
             android:gravity="start"
             android:layout_weight="1"

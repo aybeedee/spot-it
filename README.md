@@ -10,7 +10,7 @@ Pages (UI):
 - [X] bottom navigation bar
 - [X] home fragment
 - [X] search fragment
-- [ ] search results
+- [X] search results
 - [ ] chat fragment
 - [ ] direct message
 - [ ] profile fragment

@@ -21,6 +21,12 @@
         <item>Multan</item>
         <item>Hyderabad</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="filters_array">
+        <item>Best Match</item>
+        <item>Most Recent</item>
+        <item>Low to High</item>
+        <item>High to Low</item>
+    </string-array>
+
 </resources>
