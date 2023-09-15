@@ -12,7 +12,7 @@ Pages (UI):
 - [X] search fragment
 - [X] search results
 - [X] chat fragment
-- [ ] direct message
+- [X] direct message
 - [ ] profile fragment
 - [ ] item details
 - [ ] post item
