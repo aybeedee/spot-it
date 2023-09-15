@@ -39,26 +39,16 @@
                 android:text="Item"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:layout_gravity="start|center_vertical"
-                android:textColor="@color/primary_grey_1"
-                android:layout_weight="1" />
+                android:gravity="start|center_vertical"
+                android:textColor="@color/primary_grey_1" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Item"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:layout_gravity="start|center_vertical"
-                android:textColor="@color/primary_grey_1"
-                android:layout_weight="1" />
-
-            <ImageView
-                android:layout_gravity="end|center_vertical"
-                android:contentDescription="@null"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_video" />
+                android:text="Report"
+                android:textSize="17sp"
+                android:gravity="end"
+                android:textColor="@color/primary_orange" />
 
         </LinearLayout>
 
@@ -68,645 +58,183 @@
             android:background="@color/view_line" />
 
     </LinearLayout>
-    <RelativeLayout
+
+    <ImageView
+        android:id="@+id/profile_header"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:src="@drawable/sole_f63_treadmill"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom|center">
-
-        <ScrollView
-            android:id="@+id/scroll_chat_messages"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@id/message_separator_bar"
-            android:fillViewport="true">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="bottom|center"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="left">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_centerHorizontal="true"
-                        app:cardElevation="0dp"
-                        app:cardCornerRadius="13dp"
-                        android:layout_gravity="start|bottom"
-                        android:layout_marginRight="10dp">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:src="@drawable/chat_portrait_1" />
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/primary_blue"
-                        android:background="@drawable/message_box"
-                        android:padding="10dp"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="right">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/white"
-                        android:background="@drawable/message_box_sent"
-                        android:padding="10dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="left">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_centerHorizontal="true"
-                        app:cardElevation="0dp"
-                        app:cardCornerRadius="13dp"
-                        android:layout_gravity="start|bottom"
-                        android:layout_marginRight="10dp">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:src="@drawable/chat_portrait_1" />
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/primary_blue"
-                        android:background="@drawable/message_box"
-                        android:padding="10dp"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="left">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_centerHorizontal="true"
-                        app:cardElevation="0dp"
-                        app:cardCornerRadius="13dp"
-                        android:layout_gravity="start|bottom"
-                        android:layout_marginRight="10dp">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:src="@drawable/chat_portrait_1" />
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/primary_blue"
-                        android:background="@drawable/message_box"
-                        android:padding="10dp"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="right">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/white"
-                        android:background="@drawable/message_box_sent"
-                        android:padding="10dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="left">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_centerHorizontal="true"
-                        app:cardElevation="0dp"
-                        app:cardCornerRadius="13dp"
-                        android:layout_gravity="start|bottom"
-                        android:layout_marginRight="10dp">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:src="@drawable/chat_portrait_1" />
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/primary_blue"
-                        android:background="@drawable/message_box"
-                        android:padding="10dp"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="right">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/white"
-                        android:background="@drawable/message_box_sent"
-                        android:padding="10dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="left">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_centerHorizontal="true"
-                        app:cardElevation="0dp"
-                        app:cardCornerRadius="13dp"
-                        android:layout_gravity="start|bottom"
-                        android:layout_marginRight="10dp">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:src="@drawable/chat_portrait_1" />
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/primary_blue"
-                        android:background="@drawable/message_box"
-                        android:padding="10dp"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="left">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_centerHorizontal="true"
-                        app:cardElevation="0dp"
-                        app:cardCornerRadius="13dp"
-                        android:layout_gravity="start|bottom"
-                        android:layout_marginRight="10dp">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:src="@drawable/chat_portrait_1" />
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/primary_blue"
-                        android:background="@drawable/message_box"
-                        android:padding="10dp"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="left">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_centerHorizontal="true"
-                        app:cardElevation="0dp"
-                        app:cardCornerRadius="13dp"
-                        android:layout_gravity="start|bottom"
-                        android:layout_marginRight="10dp">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:src="@drawable/chat_portrait_1" />
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/primary_blue"
-                        android:background="@drawable/message_box"
-                        android:padding="10dp"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="right">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/white"
-                        android:background="@drawable/message_box_sent"
-                        android:padding="10dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="right">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/white"
-                        android:background="@drawable/message_box_sent"
-                        android:padding="10dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="left">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_centerHorizontal="true"
-                        app:cardElevation="0dp"
-                        app:cardCornerRadius="13dp"
-                        android:layout_gravity="start|bottom"
-                        android:layout_marginRight="10dp">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:src="@drawable/chat_portrait_1" />
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="This is a sample message"
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/primary_blue"
-                        android:background="@drawable/message_box"
-                        android:padding="10dp"
-                        android:layout_marginRight="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="18:56"
-                        android:textSize="13sp"
-                        android:gravity="bottom"
-                        android:textColor="@color/primary_blue_2" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="left">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_centerHorizontal="true"
-                        app:cardElevation="0dp"
-                        app:cardCornerRadius="13dp"
-                        android:layout_gravity="start|bottom"
-                        android:layout_marginRight="10dp">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:src="@drawable/chat_portrait_1" />
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="..."
-                        android:textSize="17sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:textColor="@color/primary_blue"
-                        android:background="@drawable/message_box"
-                        android:padding="10dp"
-                        android:layout_marginRight="5dp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </ScrollView>
-
-        <View
-            android:id="@+id/message_separator_bar"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/view_line"
-            android:layout_above="@id/enter_message_bar"/>
-
-        <EditText
-            android:id="@+id/enter_message_bar"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:hint="Write a reply..."
-            android:inputType="text"
-            android:background="@color/white"
-            android:paddingLeft="15dp"
-            android:layout_marginLeft="9dp"
-            android:layout_above="@id/attach_send_bar"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$12"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/primary_orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/ hr"
+            android:textSize="22sp"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/primary_black" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sole F63 Treadmill"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/primary_black"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp">
 
         <LinearLayout
-            android:id="@+id/attach_send_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="0.15">
 
             <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:layout_gravity="start|center_vertical"
-                android:layout_weight="0.1"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_camera" />
-
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:layout_gravity="start|center_vertical"
-                android:layout_weight="0.1"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_insert_photo" />
-
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:layout_gravity="start|center_vertical"
-                android:layout_weight="0.1"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_insert_file" />
-
-            <TextView
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:gravity="end|center_vertical"
-                android:text="Send"
-                android:textColor="@color/primary_orange"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+                android:src="@drawable/ic_location" />
 
         </LinearLayout>
 
-    </RelativeLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Islamabad"
+            android:textSize="15sp"
+            android:gravity="start"
+            android:layout_weight="0.7"
+            android:textColor="@color/primary_grey_6" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="7th Mar, 2023"
+            android:textSize="15sp"
+            android:gravity="end"
+            android:layout_weight="1"
+            android:textColor="@color/primary_grey_6" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        android:textSize="15sp"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/primary_black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="24dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginRight="15dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/chat_portrait_1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Makenna Dias"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="top"
+                android:layout_weight="1"
+                android:textColor="@color/primary_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24 items rented"
+                android:textSize="13sp"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:textColor="@color/primary_grey_6" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_gravity="end|center_vertical"
+            android:contentDescription="@null"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_chat_navbar"
+            android:background="@drawable/number_input"
+            android:layout_weight="0.1"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_line"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:text="Rent it"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/button"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="17sp"
+        android:stateListAnimator="@null"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
 </LinearLayout>
