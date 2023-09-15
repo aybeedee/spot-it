@@ -3,6 +3,9 @@
     <style name="Theme.I200528" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorPrimary">@color/primary_orange</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
 <!--        <item name="colorPrimary">@color/purple_200</item>-->
 <!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
 <!--        <item name="colorOnPrimary">@color/black</item>-->

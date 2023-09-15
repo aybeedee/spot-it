@@ -7,5 +7,18 @@ Pages (UI):
 - [X] forgot password
 - [X] sign up
 - [X] email verification
-- [ ] bottom navigation bar
-- [ ] home fragment
+- [X] bottom navigation bar
+- [X] home fragment
+- [ ] search fragment
+- [ ] search results
+- [ ] chat fragment
+- [ ] direct message
+- [ ] profile fragment
+- [ ] item details
+- [ ] post item
+- [ ] edit profile
+- [ ] report
+- [ ] photo camera
+- [ ] video camera
+- [ ] video call
+- [ ] voice call
