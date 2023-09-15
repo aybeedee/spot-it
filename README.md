@@ -15,7 +15,7 @@ Pages (UI):
 - [X] direct message
 - [X] profile fragment
 - [X] item details
-- [ ] post item
+- [X] post item
 - [ ] edit profile
 - [ ] report
 - [ ] photo camera
