@@ -88,7 +88,7 @@
         android:textColor="@color/primary_grey_1"
         android:layout_marginBottom="5dp" />
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
@@ -98,9 +98,18 @@
             android:id="@+id/spinner_country_dropdown"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:spinnerMode="dialog" />
+            android:spinnerMode="dialog"
+            android:background="@drawable/ic_transparent"/>
 
-    </LinearLayout>
+        <ImageView
+            android:layout_gravity="end|center_vertical"
+            android:contentDescription="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/ic_arrow_down" />
+
+    </FrameLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -111,19 +120,28 @@
         android:textColor="@color/primary_grey_1"
         android:layout_marginBottom="5dp" />
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/input_box">
 
         <Spinner
             android:id="@+id/spinner_city_dropdown"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:spinnerMode="dialog" />
+            android:spinnerMode="dialog"
+            android:background="@drawable/ic_transparent"/>
 
-    </LinearLayout>
+        <ImageView
+            android:layout_gravity="end|center_vertical"
+            android:contentDescription="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/ic_arrow_down" />
+
+    </FrameLayout>
 
     <Button
         android:id="@+id/button_sign_up"

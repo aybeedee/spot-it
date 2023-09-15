@@ -9,7 +9,7 @@ Pages (UI):
 - [X] email verification
 - [X] bottom navigation bar
 - [X] home fragment
-- [ ] search fragment
+- [X] search fragment
 - [ ] search results
 - [ ] chat fragment
 - [ ] direct message
