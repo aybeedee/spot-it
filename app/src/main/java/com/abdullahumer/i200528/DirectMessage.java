@@ -22,13 +22,16 @@ public class DirectMessage extends AppCompatActivity {
         chat_messages = findViewById(R.id.scroll_chat_messages);
 
         chat_messages.postDelayed(new Runnable() {
+
             @Override
             public void run() {
+
                 chat_messages.fullScroll(ScrollView.FOCUS_DOWN);
             }
         },0);
 
         back_chat.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 

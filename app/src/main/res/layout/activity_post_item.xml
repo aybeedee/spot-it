@@ -26,6 +26,7 @@
             android:paddingRight="20dp">
 
             <ImageView
+                android:id="@+id/image_close_post_item"
                 android:layout_gravity="start|center_vertical"
                 android:contentDescription="@null"
                 android:layout_width="32dp"
