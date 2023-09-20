@@ -6,20 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
 
-public class SignUp extends AppCompatActivity {
+public class EditProfile extends AppCompatActivity {
 
-    Button sign_up;
-    TextView login;
+    ImageView back_edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_edit_profile);
 
         Spinner countrySpinner = findViewById(R.id.spinner_country_dropdown);
         ArrayAdapter<CharSequence> countrySpinnerAdapter = ArrayAdapter.createFromResource(this, R.array.countries_array, R.layout.spinner_dropdown_item);
@@ -31,26 +29,16 @@ public class SignUp extends AppCompatActivity {
         citySpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         citySpinner.setAdapter(citySpinnerAdapter);
 
-        sign_up = findViewById(R.id.button_sign_up);
-        login = findViewById(R.id.text_login);
+        back_edit = findViewById(R.id.image_back_edit);
 
-        sign_up.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(SignUp.this, EmailVerification.class);
-                startActivity(intent);
-            }
-        });
-
-        login.setOnClickListener(new View.OnClickListener() {
+        back_edit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(SignUp.this, Login.class);
+                Intent intent = new Intent(EditProfile.this, MainActivity.class);
                 startActivity(intent);
+
             }
         });
     }
