@@ -16,8 +16,8 @@ Pages (UI):
 - [X] profile fragment
 - [X] item details
 - [X] post item
-- [ ] edit profile
-- [ ] report
+- [X] edit profile
+- [X] report
 - [ ] photo camera
 - [ ] video camera
 - [ ] video call
