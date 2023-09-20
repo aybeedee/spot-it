@@ -56,37 +56,65 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp">
+        android:paddingRight="20dp"
+        android:layout_marginBottom="20dp">
 
         <FrameLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:padding="40dp"
+            android:layout_height="100dp"
             android:background="@drawable/dashed_border"
             android:layout_weight="1"
-            android:layout_marginRight="10dp">
+            android:layout_marginRight="15dp">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_camera"
-                app:tint="@color/primary_orange" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_camera"
+                    app:tint="@color/primary_orange" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Upload Image"
+                    android:textSize="13sp"
+                    android:textColor="@color/primary_orange" />
+
+            </LinearLayout>
 
         </FrameLayout>
 
         <FrameLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:padding="40dp"
+            android:layout_height="100dp"
             android:background="@drawable/dashed_border"
             android:layout_weight="1">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_video"
-                app:tint="@color/primary_orange" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_video"
+                    app:tint="@color/primary_orange" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Upload Video"
+                    android:textSize="13sp"
+                    android:textColor="@color/primary_orange" />
+
+            </LinearLayout>
 
         </FrameLayout>
 
@@ -134,7 +162,8 @@
         android:paddingLeft="15dp"
         android:layout_marginBottom="15dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
+        android:layout_marginRight="20dp"
+        android:inputType="number" />
 
     <TextView
         android:layout_width="match_parent"
@@ -149,13 +178,15 @@
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="90dp"
         android:hint="Enter description"
         android:background="@drawable/input_box"
         android:paddingLeft="15dp"
+        android:paddingTop="15dp"
         android:layout_marginBottom="15dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
+        android:layout_marginRight="20dp"
+        android:gravity="top" />
 
     <TextView
         android:layout_width="match_parent"
