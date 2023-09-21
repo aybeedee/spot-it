@@ -671,6 +671,7 @@
             android:paddingRight="20dp">
 
             <ImageView
+                android:id="@+id/image_take_picture"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:layout_gravity="start|center_vertical"

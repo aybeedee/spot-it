@@ -18,7 +18,7 @@ Pages (UI):
 - [X] post item
 - [X] edit profile
 - [X] report
-- [ ] photo camera
+- [X] photo camera
 - [ ] video camera
 - [ ] video call
 - [ ] voice call
