@@ -8,36 +8,36 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class PhotoCamera extends AppCompatActivity {
+public class VideoCamera extends AppCompatActivity {
 
-    ImageView back_photo_camera;
-    TextView video_switch;
+    TextView photo_switch;
+    ImageView back_video_camera;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_photo_camera);
+        setContentView(R.layout.activity_video_camera);
 
-        back_photo_camera = findViewById(R.id.image_back_photo_camera);
-        video_switch = findViewById(R.id.text_video_switch);
+        back_video_camera = findViewById(R.id.image_back_video_camera);
+        photo_switch = findViewById(R.id.text_photo_switch);
 
-        back_photo_camera.setOnClickListener(new View.OnClickListener() {
+        back_video_camera.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(PhotoCamera.this, DirectMessage.class);
+                Intent intent = new Intent(VideoCamera.this, DirectMessage.class);
                 startActivity(intent);
             }
         });
 
-        video_switch.setOnClickListener(new View.OnClickListener() {
+        photo_switch.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(PhotoCamera.this, VideoCamera.class);
+                Intent intent = new Intent(VideoCamera.this, PhotoCamera.class);
                 startActivity(intent);
             }
         });

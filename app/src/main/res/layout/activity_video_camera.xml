@@ -19,7 +19,7 @@
         android:paddingTop="20dp">
 
         <ImageView
-            android:id="@+id/image_back_photo_camera"
+            android:id="@+id/image_back_video_camera"
             android:contentDescription="@null"
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -122,26 +122,26 @@
             android:weightSum="1">
 
             <TextView
+                android:id="@+id/text_photo_switch"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="Photo"
                 android:textSize="15sp"
                 android:layout_weight="0.5"
                 android:gravity="center"
-                android:textColor="@color/white"
-                android:background="@drawable/camera_toggle"
+                android:textColor="@color/primary_grey_9"
                 android:padding="3dp"
                 android:layout_gravity="center_vertical" />
 
             <TextView
-                android:id="@+id/text_video_switch"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="Video"
                 android:textSize="15sp"
                 android:layout_weight="0.5"
                 android:gravity="center"
-                android:textColor="@color/primary_grey_9"
+                android:textColor="@color/white"
+                android:background="@drawable/camera_toggle"
                 android:padding="5dp"
                 android:layout_gravity="center_vertical" />
 
