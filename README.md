@@ -21,4 +21,4 @@ Pages (UI):
 - [X] photo camera
 - [X] video camera
 - [X] video call
-- [ ] voice call
+- [X] voice call
