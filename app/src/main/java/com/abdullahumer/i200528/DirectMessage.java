@@ -10,7 +10,7 @@ import android.widget.ScrollView;
 
 public class DirectMessage extends AppCompatActivity {
 
-    ImageView back_chat, take_picture;
+    ImageView back_chat, take_picture, video_call;
     ScrollView chat_messages;
 
     @Override
@@ -21,6 +21,7 @@ public class DirectMessage extends AppCompatActivity {
 
         back_chat = findViewById(R.id.image_back_chat);
         take_picture = findViewById(R.id.image_take_picture);
+        video_call = findViewById(R.id.image_video_call);
         chat_messages = findViewById(R.id.scroll_chat_messages);
 
         back_chat.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +41,17 @@ public class DirectMessage extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(DirectMessage.this, PhotoCamera.class);
+                startActivity(intent);
+
+            }
+        });
+
+        video_call.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(DirectMessage.this, VideoCall.class);
                 startActivity(intent);
 
             }
