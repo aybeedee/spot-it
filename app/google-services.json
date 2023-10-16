@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "163304029147",
+    "project_id": "spot-it-80c30",
+    "storage_bucket": "spot-it-80c30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163304029147:android:35a2965e50daccbbb605fe",
+        "android_client_info": {
+          "package_name": "com.ramish.f200433_3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2BKXJ0FhqBO5LeGi_f_hfjn2a5ax4nJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

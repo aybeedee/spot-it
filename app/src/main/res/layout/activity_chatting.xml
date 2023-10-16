@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chatting"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|start"
+        android:padding="20dp"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center|start">
+            <ImageView
+                android:onClick="BackPage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/arrow" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Makenna Diaz"
+                android:textSize="25dp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textColor="#3F4144"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|end"
+            android:padding="5dp">
+            <ImageView
+                android:onClick="AudioCall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/call" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|end"
+            android:padding="5dp">
+            <ImageView
+                android:onClick="VideoCall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/video_icon" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:padding="0dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#CCCCCC"/>
+
+                <include
+                    android:id="@+id/receivingMsgLayout"
+                    layout="@layout/receiving_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line" />
+
+                <include
+                    android:id="@+id/sendingMsgLayout"
+                    layout="@layout/sending_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/receivingMsgLayout" />
+
+                <include
+                    android:id="@+id/receivingMsgLayout2"
+                    layout="@layout/receiving_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sendingMsgLayout" />
+                <include
+                    android:id="@+id/receivingMsgLayout3"
+                    layout="@layout/receiving_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/receivingMsgLayout2" />
+                <include
+                    android:id="@+id/receivingMsgLayout4"
+                    layout="@layout/receiving_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/receivingMsgLayout3" />
+                <include
+                    android:id="@+id/sendingMsgLayout2"
+                    layout="@layout/sending_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/receivingMsgLayout4" />
+                <include
+                    android:id="@+id/sendingMsgLayout3"
+                    layout="@layout/sending_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sendingMsgLayout2" />
+                <include
+                    android:id="@+id/receivingMsgLayout5"
+                    layout="@layout/receiving_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sendingMsgLayout3" />
+                <include
+                    android:id="@+id/typingMsgLayout"
+                    layout="@layout/typing_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/receivingMsgLayout5" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#CCCCCC"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:hint="Write a reply ..."
+            android:textSize="30dp"
+            android:background="@drawable/reply_box"
+            android:padding="0dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="7"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp">
+            <ImageView
+                android:onClick="OpenCamera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/camera_chat" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:onClick="BackPage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/gallery_chat"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:onClick="BackPage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/notes"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|end"
+                android:text="Send"
+                android:textSize="30dp"
+                android:padding="0dp"
+                android:textStyle="bold"
+                android:textColor="#EF8305"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
