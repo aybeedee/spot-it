@@ -233,7 +233,8 @@
         android:layout_marginLeft="20dp"
         android:background="@drawable/rounded_button"
         android:textColor="#FFFFFF"
-        android:text="Sign Up"/>
+        android:text="Sign Up"
+        android:clickable="true"/>
 
     <TextView
         android:layout_alignParentBottom="true"
@@ -251,7 +252,8 @@
         android:text="Login"
         android:textColor="#56595D"
         android:textSize="25dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:clickable="true"/>
 
     </RelativeLayout>
 

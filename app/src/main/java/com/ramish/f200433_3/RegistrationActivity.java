@@ -1,6 +1,8 @@
 package com.ramish.f200433_3;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -81,18 +83,24 @@ public class RegistrationActivity extends AppCompatActivity {
                                                             // Save user data to Firebase Realtime Database
                                                             
                                                             String uid = user.getUid();
-//                                                            User user=(uid,name,email,contact,citySpinner,countrySpinner);
                                                             DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("users").child(uid);
                                                             userRef.child("name").setValue(name1);
                                                             userRef.child("email").setValue(email1);
                                                             userRef.child("contact").setValue(contact1);
                                                             userRef.child("city").setValue(city1);
                                                             userRef.child("country").setValue(country1);
+                                                            userRef.child("profile_picture").setValue("");
+                                                            userRef.child("cover_photo").setValue("");
 
 
                                                             Toast.makeText(RegistrationActivity.this, "Verification code sent", Toast.LENGTH_LONG).show();
                                                             Intent intent = new Intent(RegistrationActivity.this, dashboard.class);
-                                                            intent.putExtra("user_id",uid);
+
+                                                            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                                                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                                                            editor.putString("UID", user.getUid()); // Save the UID
+                                                            editor.apply();
+
                                                             startActivity(intent);
                                                         } else {
                                                             Toast.makeText(RegistrationActivity.this, "Verification code failed", Toast.LENGTH_LONG).show();
@@ -105,17 +113,6 @@ public class RegistrationActivity extends AppCompatActivity {
                                 }
                             }
                         });
-
-//                // Create an intent to navigate to the email verification page
-//                Intent intent = new Intent(RegistrationActivity.this, email_verification.class);
-//                // Pass the user data as extras in the intent
-//                intent.putExtra("userName", name.getText().toString());
-//                intent.putExtra("userEmail", email.getText().toString());
-//                intent.putExtra("userContact", contact.getText().toString());
-//                intent.putExtra("userPassword", password.getText().toString());
-//                intent.putExtra("selectedCity", citySpinner.getSelectedItem().toString());
-//                intent.putExtra("selectedCountry", countrySpinner.getSelectedItem().toString());
-//                startActivity(intent);
             }
         });
     }

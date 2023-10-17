@@ -22,9 +22,10 @@
             android:textColor="#434343"/>
 
         <TextView
+            android:id="@+id/nameTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Daud "
+            android:text=" "
             android:textSize="25dp"
             android:textStyle="bold"
             android:textColor="#EF8305"/>
