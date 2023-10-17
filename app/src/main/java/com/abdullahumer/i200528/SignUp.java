@@ -16,9 +16,12 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUp extends AppCompatActivity {
 
@@ -45,6 +48,7 @@ public class SignUp extends AppCompatActivity {
         citySpinner.setAdapter(citySpinnerAdapter);
 
         mAuth = FirebaseAuth.getInstance();
+
         Log.d("mAuth", mAuth.toString());
 
         sign_up = findViewById(R.id.button_sign_up);
@@ -71,10 +75,26 @@ public class SignUp extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             Toast.makeText(SignUp.this, "Sign Up Successful", Toast.LENGTH_LONG).show();
-                            Toast.makeText(SignUp.this, mAuth.getUid().toString(), Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(SignUp.this, MainActivity.class);
-                            startActivity(intent);
-                            finish();
+
+                            String userId = mAuth.getUid().toString();
+
+                            Toast.makeText(SignUp.this, userId, Toast.LENGTH_LONG).show();
+
+                            DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+
+                            User user = new User(userId, name.getText().toString(), email.getText().toString(), contact.getText().toString(), countrySpinner.getSelectedItem().toString(), citySpinner.getSelectedItem().toString(),"", "");
+
+                            mDatabase.child("users").child(userId).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+
+                                    Log.d("databaseUsers", "users");
+
+                                    Intent intent = new Intent(SignUp.this, MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            });
                         }
                     }
                 ).addOnFailureListener(new OnFailureListener() {
