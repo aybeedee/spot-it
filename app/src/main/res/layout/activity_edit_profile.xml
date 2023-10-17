@@ -44,6 +44,7 @@
                 android:textColor="@color/primary_grey_1" />
 
             <TextView
+                android:id="@+id/save"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Save Changes"
@@ -60,6 +61,77 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="20dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/dashed_border"
+            android:layout_weight="1"
+            android:layout_marginRight="15dp">
+
+            <LinearLayout
+                android:id="@+id/changeDp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_camera"
+                    app:tint="@color/primary_orange" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Change Profile Picture"
+                    android:textSize="13sp"
+                    android:textColor="@color/primary_orange" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/dashed_border"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/changeCover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_camera"
+                    app:tint="@color/primary_orange" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Change Cover Photo"
+                    android:textSize="13sp"
+                    android:textColor="@color/primary_orange" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,6 +144,7 @@
         android:layout_marginRight="20dp" />
 
     <EditText
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Abdullah"
@@ -93,6 +166,8 @@
         android:layout_marginRight="20dp" />
 
     <EditText
+        android:id="@+id/email"
+        android:editable="false"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="abdullah@gmail.com"
@@ -115,9 +190,10 @@
         android:layout_marginRight="20dp" />
 
     <EditText
+        android:id="@+id/contact"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="0123 4567890"
+        android:hint="03334567890"
         android:inputType="phone"
         android:background="@drawable/input_box"
         android:paddingLeft="15dp"
