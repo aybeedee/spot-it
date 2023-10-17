@@ -35,8 +35,8 @@ public class EditProfile extends AppCompatActivity {
 
     ImageView back_edit;
     LinearLayout changeDp, changeCover;
-    TextView save;
-    EditText name, contact, email;
+    TextView save, email;
+    EditText name, contact;
 
     String userId, dpUrl, coverUrl;
 
@@ -86,9 +86,9 @@ public class EditProfile extends AppCompatActivity {
 
                     User userObject = task.getResult().getValue(User.class);
 
-                    name.setHint(userObject.getFullName());
-                    contact.setHint(userObject.getContactNumber());
-                    email.setHint(userObject.getEmail());
+                    name.setText(userObject.getFullName());
+                    contact.setText(userObject.getContactNumber());
+                    email.setText(userObject.getEmail());
 
                     Log.d("firebase", String.valueOf(task.getResult().getValue()));
                     Log.d("userInfo", userObject.getCity());

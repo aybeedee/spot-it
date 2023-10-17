@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -90,7 +89,7 @@ public class SignUp extends AppCompatActivity {
 
                                     Log.d("databaseUsers", "users");
 
-                                    Intent intent = new Intent(SignUp.this, MainActivity.class);
+                                    Intent intent = new Intent(SignUp.this, EditProfile.class);
                                     startActivity(intent);
                                     finish();
                                 }

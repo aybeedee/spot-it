@@ -38,13 +38,15 @@
         android:layout_marginBottom="5dp" />
 
     <EditText
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Enter email"
         android:inputType="textEmailAddress"
         android:background="@drawable/input_box"
         android:paddingLeft="15dp"
-        android:layout_marginBottom="15dp" />
+        android:layout_marginBottom="15dp"
+        android:text="" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,13 +59,15 @@
         android:layout_marginBottom="5dp" />
 
     <EditText
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Enter password"
         android:inputType="textPassword"
         android:background="@drawable/input_box"
         android:paddingLeft="15dp"
-        android:layout_marginBottom="15dp" />
+        android:layout_marginBottom="15dp"
+        android:text="" />
 
     <TextView
         android:id="@+id/text_forgot_password"
