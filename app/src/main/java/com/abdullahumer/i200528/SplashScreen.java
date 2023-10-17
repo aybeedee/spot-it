@@ -30,7 +30,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-                if(mAuth.getUid() != null) {
+                if(mAuth.getCurrentUser() != null) {
 
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 }
@@ -39,6 +39,8 @@ public class SplashScreen extends AppCompatActivity {
 
                     startActivity(new Intent(getApplicationContext(), Login.class));
                 }
+
+                finish();
             }
         }, 5000);
     }

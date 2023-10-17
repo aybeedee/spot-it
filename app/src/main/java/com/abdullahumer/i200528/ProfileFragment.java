@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +30,9 @@ public class ProfileFragment extends Fragment {
     private String mParam2;
 
     ImageView edit_nav;
+    TextView logout;
+
+    FirebaseAuth mAuth;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -67,6 +73,7 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         edit_nav = view.findViewById(R.id.image_edit_nav);
+        logout = view.findViewById(R.id.logout);
 
         edit_nav.setOnClickListener(new View.OnClickListener() {
 
@@ -75,6 +82,23 @@ public class ProfileFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), EditProfile.class);
                 startActivity(intent);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+
+                mAuth = FirebaseAuth.getInstance();
+
+                mAuth.signOut();
+
+                Intent intent = new Intent(getActivity(), Login.class);
+                startActivity(intent);
+
+                getActivity().finish();
             }
         });
 

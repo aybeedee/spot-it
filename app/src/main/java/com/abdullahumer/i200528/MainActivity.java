@@ -16,11 +16,14 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.abdullahumer.i200528.databinding.ActivityMainBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
 //    BottomNavigationView navb;
     ActivityMainBinding mainBinding;
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +92,14 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
+
+        mAuth = FirebaseAuth.getInstance();
+
+        if(mAuth.getCurrentUser() == null) {
+
+            startActivity(new Intent(getApplicationContext(), Login.class));
+            finish();
+        }
     }
 
     private void replaceFrag(Fragment fragment) {
