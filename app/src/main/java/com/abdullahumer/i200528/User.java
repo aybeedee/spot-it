@@ -22,6 +22,8 @@ public class User {
         this.coverPhotoUrl = coverPhotoUrl;
     }
 
+    public User() {}
+
     public String getId() {
         return id;
     }

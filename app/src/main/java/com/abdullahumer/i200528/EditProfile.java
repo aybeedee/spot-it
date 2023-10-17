@@ -22,6 +22,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -40,6 +41,7 @@ public class EditProfile extends AppCompatActivity {
     String userId, dpUrl, coverUrl;
 
     FirebaseAuth mAuth;
+    DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,12 +68,33 @@ public class EditProfile extends AppCompatActivity {
 
         save = findViewById(R.id.save);
 
-        //initiate
         mAuth = FirebaseAuth.getInstance();
 
         userId = mAuth.getUid().toString();
 
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
+        mDatabase.child("users").child(userId).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+
+                if (!task.isSuccessful()) {
+
+                    Log.e("firebase", "Error getting data", task.getException());
+                }
+                else {
+
+                    User userObject = task.getResult().getValue(User.class);
+
+                    name.setHint(userObject.getFullName());
+                    contact.setHint(userObject.getContactNumber());
+                    email.setHint(userObject.getEmail());
+
+                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                    Log.d("userInfo", userObject.getCity());
+                }
+            }
+        });
 
         changeDp.setOnClickListener(new View.OnClickListener() {
 
@@ -102,14 +125,17 @@ public class EditProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
-
                 mDatabase.child("users").child(userId).child("profilePhotoUrl").setValue(dpUrl);
                 mDatabase.child("users").child(userId).child("coverPhotoUrl").setValue(coverUrl);
                 mDatabase.child("users").child(userId).child("fullName").setValue(name.getText().toString());
                 mDatabase.child("users").child(userId).child("contactNumber").setValue(contact.getText().toString());
                 mDatabase.child("users").child(userId).child("country").setValue(countrySpinner.getSelectedItem().toString());
                 mDatabase.child("users").child(userId).child("city").setValue(citySpinner.getSelectedItem().toString());
+
+                Toast.makeText(EditProfile.this, "Profile Updated", Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(EditProfile.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
