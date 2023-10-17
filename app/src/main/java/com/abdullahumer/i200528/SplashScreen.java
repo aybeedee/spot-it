@@ -8,10 +8,14 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class SplashScreen extends AppCompatActivity {
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +23,22 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
+        mAuth = FirebaseAuth.getInstance();
+
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), Login.class));
+
+                if(mAuth.getUid() != null) {
+
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                }
+
+                else {
+
+                    startActivity(new Intent(getApplicationContext(), Login.class));
+                }
             }
-        }, 2000);
+        }, 5000);
     }
 }

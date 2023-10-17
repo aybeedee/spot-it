@@ -19,12 +19,45 @@ import com.abdullahumer.i200528.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+//    BottomNavigationView navb;
     ActivityMainBinding mainBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+//        navb = findViewById(R.id.bottomNavigationView);
+//
+//        navb.setOnItemSelectedListener(item -> {
+//            switch (item.getItemId())
+//            {
+//                case R.id.home_bottomnav:
+//                    replaceFrag(new HomeFragment());
+//                    break;
+//
+//                case R.id.search_bottomnav:
+//                    replaceFrag(new SearchFragment());
+//                    break;
+//
+//                case R.id.add_bottomnav:
+//                    Intent intent = new Intent(MainActivity.this, PostItem.class);
+//                    startActivity(intent);
+//                    break;
+//
+//                case R.id.chat_bottomnav:
+//                    replaceFrag(new ChatFragment());
+//                    break;
+//
+//                case R.id.profile_bottomnav:
+//                    replaceFrag(new ProfileFragment());
+//                    break;
+//            }
+//
+//            return true;
+//        });
+
         mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mainBinding.getRoot());
         replaceFrag(new HomeFragment());
@@ -58,14 +91,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void replaceFrag(Fragment fragment)
-    {
+    private void replaceFrag(Fragment fragment) {
+
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-
-        transaction.replace(R.id.frame_layout,fragment);
+        transaction.replace(R.id.frame_layout, fragment);
         transaction.commit();
-
-
     }
 }

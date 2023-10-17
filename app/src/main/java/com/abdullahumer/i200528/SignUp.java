@@ -1,19 +1,32 @@
 package com.abdullahumer.i200528;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUp extends AppCompatActivity {
 
     Button sign_up;
     TextView login;
+    EditText name, email, contact, password;
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,16 +44,47 @@ public class SignUp extends AppCompatActivity {
         citySpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         citySpinner.setAdapter(citySpinnerAdapter);
 
+        mAuth = FirebaseAuth.getInstance();
+        Log.d("mAuth", mAuth.toString());
+
         sign_up = findViewById(R.id.button_sign_up);
         login = findViewById(R.id.text_login);
+        name = findViewById(R.id.name);
+        email = findViewById(R.id.email);
+        contact = findViewById(R.id.contact);
+        password = findViewById(R.id.password);
 
         sign_up.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
 
-                Intent intent = new Intent(SignUp.this, EmailVerification.class);
-                startActivity(intent);
+                Log.d("email", email.getText().toString());
+                Log.d("password", password.getText().toString());
+
+                mAuth.createUserWithEmailAndPassword(
+
+                        email.getText().toString(), password.getText().toString()
+                ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+
+                            Toast.makeText(SignUp.this, "Sign Up Successful", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SignUp.this, mAuth.getUid().toString(), Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(SignUp.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }
+                ).addOnFailureListener(new OnFailureListener() {
+
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                        Toast.makeText(SignUp.this, "Sign Up Failed"+e.toString(), Toast.LENGTH_LONG).show();
+                    }
+                });
             }
         });
 
@@ -53,5 +97,12 @@ public class SignUp extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        if(mAuth.getUid() != null) {
+
+            Intent intent = new Intent(SignUp.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }

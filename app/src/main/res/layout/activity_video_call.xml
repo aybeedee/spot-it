@@ -20,7 +20,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp">
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -28,9 +29,7 @@
                 android:text="00:58"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:textColor="@color/primary_grey_9"
-                android:gravity="left"
-                android:layout_gravity="left" />
+                android:textColor="@color/primary_grey_9" />
 
         </LinearLayout>
 

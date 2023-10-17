@@ -23,7 +23,7 @@
         android:textStyle="bold"
         android:layout_gravity="start"
         android:textColor="@color/primary_black"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="15dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -35,13 +35,14 @@
         android:layout_marginBottom="5dp" />
 
     <EditText
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Enter name"
         android:inputType="textPersonName"
         android:background="@drawable/input_box"
         android:paddingLeft="15dp"
-        android:layout_marginBottom="15dp" />
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -53,13 +54,14 @@
         android:layout_marginBottom="5dp" />
 
     <EditText
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Enter email"
         android:inputType="textEmailAddress"
         android:background="@drawable/input_box"
         android:paddingLeft="15dp"
-        android:layout_marginBottom="15dp" />
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -71,13 +73,33 @@
         android:layout_marginBottom="5dp" />
 
     <EditText
+        android:id="@+id/contact"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Enter contact number"
         android:inputType="phone"
         android:background="@drawable/input_box"
         android:paddingLeft="15dp"
-        android:layout_marginBottom="15dp" />
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_grey_1"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter password"
+        android:inputType="textPassword"
+        android:background="@drawable/input_box"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -91,7 +113,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/input_box">
 
         <Spinner
